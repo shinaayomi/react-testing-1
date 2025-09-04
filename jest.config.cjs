@@ -22,4 +22,5 @@ module.exports = {
     "**/?(*.)+(spec|test).?(ts|tsx|js|jsx)",
   ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  verbose: true, // Add this line
 };

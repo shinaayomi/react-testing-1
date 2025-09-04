@@ -85,3 +85,32 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 ---
 
 Built with ❤️ using React Router.
+
+## TESTING
+
+test(name, fn, timeout)
+
+- the first argument is the name of the test used to identify the test
+- The second argument is a function that contains the expextations to test / code for the test
+- The third argument is timeout which is an optional argument for specifying how long to wait before aborting the test. The default timeout value is 5000ms(5 seconds).
+  TO FILTER
+- test.only(name, fn, timeout)
+- test.skip(name, fn, timeout)
+
+describe(name, fn)
+
+- The first argument is the group name
+- The second argument is a function that contains the expectations to test
+
+  TO FILTER
+
+- describe.only(name, fn)
+- describe.skip(name, fn)
+  it(name, fn, timeout)
+  fit(name, fn, timeout): To filter only the tests
+  xit(name, fn, timeout): To filter exclude the tests
+
+- Filename Conventions are:
+- Files with _.test.js, _.test.tsx, _.spec.js,_.spec.tsx suffix
+- Files with .js or .tsx suffix in **tests**(double underscore tests) folders.
+  Recommendation is to always put your tests next to the code they are testing so that reative imports are shorter.
