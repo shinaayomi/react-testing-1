@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Greet } from "../components/greet";
+import { Greet } from "../components/greet/greet";
 
 describe("Greet", () => {
   test("renders correctly", () => {

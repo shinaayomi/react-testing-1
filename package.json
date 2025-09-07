@@ -9,7 +9,7 @@
     "typecheck": "react-router typegen && tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage --watchAll --collectCoverageFrom='app/components/**/*.{ts,tsx}' --collectCoverageFrom='!app/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}'"
   },
   "dependencies": {
     "@react-router/node": "^7.7.1",
