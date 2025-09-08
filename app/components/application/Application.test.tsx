@@ -14,12 +14,31 @@ describe("Application", () => {
 
     const sectionHeading = screen.getByRole("heading", { level: 2 });
     expect(sectionHeading).toBeInTheDocument();
+    // QUERY BY TEXT
+    const paragrapgElement = screen.getByText("All fields are mandatory");
+    expect(paragrapgElement).toBeInTheDocument();
+    // QUERY BY TITLE
+    const closeElement = screen.getByTitle("close");
+    expect(closeElement).toBeInTheDocument();
+    // QUERY BY TEST ID
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
 
+    // QUERY BY LABEL NAME
     const nameElement = screen.getByRole("textbox", { name: "Name" });
     expect(nameElement).toBeInTheDocument();
-
+    // QUERY BY TAG
     const nameElement2 = screen.getByLabelText("Name", { selector: "input" });
     expect(nameElement2).toBeInTheDocument();
+    // QUERY BY PLACEHOLDER
+    const nameElement3 = screen.getByPlaceholderText("Fullname");
+    expect(nameElement3).toBeInTheDocument();
+    // QUERY BY INPUT VALUE
+    const nameElement4 = screen.getByDisplayValue("Vishwas");
+    expect(nameElement4).toBeInTheDocument();
+    // QUERY BY ALT TEXT
+    const imgElement = screen.getByAltText("a person with a laptop");
+    expect(imgElement).toBeInTheDocument();
 
     const bioElement = screen.getByRole("textbox", { name: "Bio" });
     expect(bioElement).toBeInTheDocument();
