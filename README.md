@@ -114,3 +114,18 @@ describe(name, fn)
 - Files with _.test.js, _.test.tsx, _.spec.js,_.spec.tsx suffix
 - Files with .js or .tsx suffix in **tests**(double underscore tests) folders.
   Recommendation is to always put your tests next to the code they are testing so that reative imports are shorter.
+
+When Element is not present in the DOM, we use queryBy queryAllBy
+
+MANUAL QUERIES
+RQL Queries
+
+- getBy & getAllBy
+- queryBy & queryAllBy
+- findBy & findAllBy
+
+Manual queries - you can use the regular querySelector DOM API to find elements
+
+const {contianer} = render(<MyComponent/>)
+
+const foo = container.querySelector('[data-foo="bar"]')
