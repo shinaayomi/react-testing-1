@@ -129,3 +129,14 @@ Manual queries - you can use the regular querySelector DOM API to find elements
 const {contianer} = render(<MyComponent/>)
 
 const foo = container.querySelector('[data-foo="bar"]')
+
+### fireEvent vs user-event
+
+fireEvent is a method from RTL (React Testing Library) which is used to dispatch DOM events
+
+user-event simulates full interactions, which may fire multiple events and do additional checks along the way
+
+For example, we can dispatch the change event on an input field using fireEvent.
+When a user type into a text box, the element has to be focused, and then keyboard and input events are fired and the selection and value on the element are manipulated as they type
+
+user-event allows you to describe a user/full interaction instead of a concrete event. it adds visibility and intractability checks along the way and manipulates the DOM just like a user interaction in the browser would. It factors in that the browser e.g. wouldn't let a click a hidden element or type in a disabled text box
