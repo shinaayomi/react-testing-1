@@ -3,6 +3,7 @@ import { Welcome } from "../welcome/welcome";
 import { Application } from "../components/application/Application";
 import { Skills } from "~/components/skills/Skills";
 import { Counter } from "~/components/counter/Counter";
+import { MuiMode } from "~/components/mui/MuiMode";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -14,10 +15,19 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   // return <Welcome />;
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "px",
+        alignItems: "center",
+        paddingTop: "20px",
+      }}
+    >
       <Application />
       <Skills skills={["HTML", "CSS"]} />
       <Counter />
+      <MuiMode />
     </div>
   );
 }
