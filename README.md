@@ -142,3 +142,7 @@ When a user type into a text box, the element has to be focused, and then keyboa
 user-event allows you to describe a user/full interaction instead of a concrete event. it adds visibility and intractability checks along the way and manipulates the DOM just like a user interaction in the browser would. It factors in that the browser e.g. wouldn't let a click a hidden element or type in a disabled text box
 
 npx husky-init && npm i
+
+<!-- Husky to run test using pre-push and push to remote -->
+
+npx husky add .husky/pre-push "npm test -- --watchAll=false"
