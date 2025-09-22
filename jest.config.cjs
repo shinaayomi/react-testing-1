@@ -5,7 +5,7 @@
 // };
 
 module.exports = {
-  testEnvironment: "jsdom",
+  testEnvironment: "jest-fixed-jsdom",
   setupFilesAfterEnv: ["<rootDir>/test/setup.ts"],
   moduleNameMapping: {
     "^@/(.*)$": "<rootDir>/app/$1",
