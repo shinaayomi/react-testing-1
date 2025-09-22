@@ -1,7 +1,7 @@
 // vitest.setup.js
-import { beforeAll, afterEach, afterAll } from "vitest";
-import { server } from "./src/mocks/node";
+import { beforeAll, afterEach, afterAll } from 'vitest'
+import { server } from './src/mocks/node'
 
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
+beforeAll(() => server.listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())

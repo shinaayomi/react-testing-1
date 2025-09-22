@@ -1,14 +1,14 @@
-import { render, screen } from "@testing-library/react";
-import { Users } from "./Users";
-import { server } from "../../mocks/node";
-import { http, HttpResponse } from "msw";
+import { render, screen } from '@testing-library/react'
+import { Users } from './Users'
+import { server } from '../../mocks/node'
+import { http, HttpResponse } from 'msw'
 
-describe("Users", () => {
-  test("renders correctly", () => {
-    render(<Users />);
-    const textElement = screen.getByText("Users");
-    expect(textElement).toBeInTheDocument();
-  });
+describe('Users', () => {
+  test('renders correctly', () => {
+    render(<Users />)
+    const textElement = screen.getByText('Users')
+    expect(textElement).toBeInTheDocument()
+  })
 
   // test("render a list of users", async () => {
   //   render(<Users />);
@@ -28,4 +28,4 @@ describe("Users", () => {
   //   const error = await screen.findByText("Error fetching users");
   //   expect(error).toBeInTheDocument();
   // });
-});
+})
